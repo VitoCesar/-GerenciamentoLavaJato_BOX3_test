@@ -16,7 +16,6 @@ body{
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-  font-family: 'karla', sans-serif;
   position:relative;
   background: lightgray;
 }
@@ -28,6 +27,9 @@ header{
   line-height: 70px;
   box-shadow: 0 1px 2px var(--shadow-color);
   text-transform: uppercase;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
 }
 
 .header-title{
@@ -35,6 +37,11 @@ header{
   text-transform: uppercase;
   letter-spacing: 2px;
   font-size: 2rem;
+}
+
+.btn-home{
+  color: white;
+  text-decoration: none;
 }
 
 main{

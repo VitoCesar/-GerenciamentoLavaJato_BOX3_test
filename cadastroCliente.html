@@ -13,10 +13,11 @@
 <body>
     <header>
         <h1 class="header-title">Cadastro de Clientes</h1>
+        <a class="btn-home" href="index.html">Home</a>
     </header>
     <main>
         <button type="button" class="button blue mobile" id="cadastrarCliente">Cadastrar Cliente</button>
-        <table class="records">
+        <table id="tableClient" class="records">
             <thead>
                 <tr>
                     <th>Nome</th>
@@ -33,7 +34,7 @@
                 </tr>
             </thead>
             <tbody>
-                <tr>
+                <!-- <tr>
                     <td>Vitor</td>
                     <td>(88)99455-7863</td>
                     <td>08153790307</td>
@@ -48,7 +49,7 @@
                         <button type="button" class="button green">editar</button>
                         <button type="button" class="button red">excluir</button>
                     </td>
-                </tr>
+                </tr> -->
             </tbody>
         </table>
         <div class="modal" id="modal">
@@ -58,7 +59,7 @@
                     <span class="modal-close" id="modalClose">&#10006;</span>
                 </header>
                 <form id="form" class="modal-form">
-                    <input id="nome" type="text" class="modal-field" placeholder="Nome do Cliente" required>
+                    <input id="nome" type="text" data-index="new" class="modal-field" placeholder="Nome do Cliente" required>
                     <input id="celular" type="text" class="modal-field" placeholder="Celular do Cliente" required>
                     <input id="cpfcnpj" type="text" class="modal-field" placeholder="CPF/CNPJ do Cliente" required>
                     <input id="cep" type="text" class="modal-field" placeholder="CEP do Cliente" required>
