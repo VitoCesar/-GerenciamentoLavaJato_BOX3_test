@@ -39,9 +39,18 @@ header{
   font-size: 2rem;
 }
 
-.btn-home{
-  color: white;
+.div-btn-home a{
+  background-color: #fff;
+  color: black;
+  border: 1px solid black;
+  border-radius: 20px;
   text-decoration: none;
+  transition: box-shadow .6s ease;
+  padding: 10px;
+  margin-left: 30px;
+  font-size: 20px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
 }
 
 main{
