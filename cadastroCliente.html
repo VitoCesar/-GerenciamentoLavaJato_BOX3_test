@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,400;0,700;1,200;1,800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/cdCliente.css">
+    <script src="./js/cadastroCliente.js" defer></script>
+    <title>Cadastro Cliente</title>
+</head>
+<body>
+    <header>
+        <h1 class="header-title">Cadastro de Clientes</h1>
+    </header>
+    <main>
+        <button type="button" class="button blue mobile" id="cadastrarCliente">Cadastrar Cliente</button>
+        <table class="records">
+            <thead>
+                <tr>
+                    <th>Nome</th>
+                    <th>Telefone</th>
+                    <th>CPF/CNPJ</th>
+                    <th>CEP</th>
+                    <th>Logradouro</th>
+                    <th>Número</th>
+                    <th>Complemento</th>
+                    <th>Bairro</th>
+                    <th>Cidade</th>
+                    <th>Estado</th>
+                    <th>Opções</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Vitor</td>
+                    <td>(88)99455-7863</td>
+                    <td>08153790307</td>
+                    <td>62034080</td>
+                    <td>Rua DR Zequinha Parente</td>
+                    <td>274</td>
+                    <td>Nenhum</td>
+                    <td>Nossa Senhora de Fatima</td>
+                    <td>Sobral</td>
+                    <td>Ceará</td>
+                    <td>
+                        <button type="button" class="button green">editar</button>
+                        <button type="button" class="button red">excluir</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <div class="modal" id="modal">
+            <div class="modal-content">
+                <header class="modal-header">
+                    <h2>Novo Cliente</h2>
+                    <span class="modal-close" id="modalClose">&#10006;</span>
+                </header>
+                <form id="form" class="modal-form">
+                    <input type="text" class="modal-field" placeholder="Nome do Cliente" required>
+                    <input type="text" class="modal-field" placeholder="Celular do Cliente" required>
+                    <input type="text" class="modal-field" placeholder="CPF/CNPJ do Cliente" required>
+                    <input type="text" class="modal-field" placeholder="Logradouro do Cliente" required>
+                    <input type="text" class="modal-field" placeholder="Número da residência do Cliente" required>
+                    <input type="text" class="modal-field" placeholder="Complemento" required>
+                    <input type="text" class="modal-field" placeholder="Bairro do Cliente" required>
+                    <input type="text" class="modal-field" placeholder="Cidade do Cliente" required>
+                    <input type="text" class="modal-field" placeholder="Estado do Cliente" required>
+                </form>
+                <footer class="modal-footer">
+                    <button id="cancelar" class="button white">Cancelar</button>
+                    <button id="salvar" class="button green">Salvar</button>
+                </footer>
+            </div>
+        </div>
+    </main>
+    <footer>
+        Todos os direitos reservados - 2022
+    </footer>
+</body>
+</html>
