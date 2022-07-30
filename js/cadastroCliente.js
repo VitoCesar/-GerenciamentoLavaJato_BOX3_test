@@ -151,3 +151,57 @@ document.getElementById('salvar')
 
 document.querySelector('#tableClient>tbody')
     .addEventListener('click', editDelete)
+
+const addressForm = document.querySelector('#form')
+const cepInput = document.querySelector('#cep')
+const addressInput = document.querySelector('#logradouro')
+const cityInput = document.querySelector('#cidade')
+const bairroInput = document.querySelector('#bairro')
+const regionInput = document.querySelector('#estado')
+const formInputs = document.querySelector('[data-input]')
+
+//validação cep input
+cepInput.addEventListener("keypress", (e) => { 
+  const onlyNumbers = /[0-9]/
+  const key = String.fromCharCode(e.keyCode)
+
+  //permitir apenas números 
+  if(!onlyNumbers.test(key)){
+    e.preventDefault()
+    return
+  }
+})
+
+//pegar endereço
+cepInput.addEventListener("keyup", (e) => {
+  const inputValue = e.target.value
+
+  //quantidade necessária de dígitos
+  if(inputValue.length === 8){
+    getAddress(inputValue)
+  }
+})
+
+//pegando valores da api
+const getAddress = async (cep) => {
+  cepInput.blur()
+
+  const apiUrl = `https://viacep.com.br/ws/${cep}/json/`
+  const response = await fetch(apiUrl)
+  const data = await response.json()
+  
+  //Error
+  if(data.erro === "true"){
+    addressForm.reset()
+    alert("CEP Inválido ou Não Encontrado, preencha p endereço manualmente.")
+    return
+  }
+
+  addressInput.value = data.logradouro
+  cityInput.value = data.localidade
+  bairroInput.value = data.bairro
+  regionInput.value = data.uf
+}
+
+
+
