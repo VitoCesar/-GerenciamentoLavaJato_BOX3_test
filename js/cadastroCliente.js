@@ -48,7 +48,19 @@ const isValidFields = () => {
 //interação com usuário
 const saveClient = () => {
   if(isValidFields()){
-    console.log("cadastrando cliente")
+    const client = {
+      nome: document.getElementById('nome').value,
+      telefone: document.getElementById('celular').value,
+      cpfcnpj: document.getElementById('cpfcnpj').value,
+      cep: document.getElementById('cep').value,
+      logradouro: document.getElementById('logradouro').value,
+      numero: document.getElementById('numero').value,
+      complemento: document.getElementById('complemento').value,
+      bairro: document.getElementById('bairro').value,
+      cidade: document.getElementById('cidade').value,
+      estado: document.getElementById('estado').value
+    }
+    createClient(client)
   }
 }
 
