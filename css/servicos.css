@@ -9,6 +9,10 @@ body{
   text-transform: uppercase;
 }
 
+i{
+  cursor: pointer;
+}
+
 /*nav bar styles*/
 .nav-bar{
   display: flex;
