@@ -1,28 +1,8 @@
 let shop = document.getElementById('shop')
 
-let shopItemsData = [{
-  id: 1,
-  name: "Lavagem Simples",
-  price: 80,
-  desc: "Lorem ipsum dolor sit amet consectetur adipisicing.",
-  img: "Imagem aqui..."
-}, 
-{
-  id: 2,
-  name: "Lavagem com Cera",
-  price: 130,
-  desc: "Lorem ipsum dolor sit amet consectetur adipisicing.",
-  img: "Imagem aqui..."
-},
-{
-  id: 3,
-  name: "Lavagem Completa",
-  price: 200,
-  desc: "Lorem ipsum dolor sit amet consectetur adipisicing.",
-  img: "Imagem aqui..."
-},
-] 
 
+
+/*alocaçao dos dados no localStorage*/
 let = basket = JSON.parse(localStorage.getItem("data")) || []
 
 
@@ -95,6 +75,7 @@ let update = (id) => {
   calculation()
 }
 
+/*soma todos os valores dos itens*/
 let calculation = () => {
   let cartIcon = document.getElementById("cartAmount")
   cartIcon.innerHTML = basket.map((e)=>e.item).reduce((x,y)=>x+y,0)
