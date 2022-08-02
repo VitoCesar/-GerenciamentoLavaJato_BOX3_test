@@ -132,6 +132,22 @@ a{
   margin-top: 10px;
   text-transform: uppercase;
   letter-spacing: 2px;
+  transition: box-shadow .6s ease;
+}
+
+.homeBtn:hover{
+  color: #23232a;
+  box-shadow: inset 200px 0 0 #fff;
+}
+
+.checkout:hover{
+  color: #155134;
+  box-shadow: inset 200px 0 0 #fff;
+}
+
+.removeAll:hover{
+  color: #ee4849;
+  box-shadow: inset 200px 0 0 #fff;
 }
 
 .checkout{
