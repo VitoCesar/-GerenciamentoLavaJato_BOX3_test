@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./css/cdModelos.css">
+  <title>Cadastro Modelos</title>
+</head>
+<body>
+  <header>
+    
+    <nav class="nav-bar">
+
+      <div class="logo">
+        <a class="logo" id="logo" href="/">Cadastro de Modelos</a>
+      </div>
+
+      <div class="nav-list">
+        <ul>
+          <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+          <li class="nav-item"><a href="cadastroCliente.html" class="nav-link">Cadastrar Clientes</a></li>
+          <li class="nav-item"><a href="cadastroMarca.html" class="nav-link">Cadastrar Marcas</a></li>
+        </ul>
+      </div>
+
+      <div class="mobile-menu-icon">
+        <button onclick="showItens()">
+          <img class="icon" src="./img/icons8-menu-rounded-50.png" alt="">
+        </button>
+      </div>
+    </nav>
+
+    <div class="mobile-menu">
+      <ul>
+        <li class="nav-item"><a href="/" class="nav-link">Serviços</a></li>
+        <li class="nav-item"><a href="/" class="nav-link">Cadastrar Clientes</a></li>
+        <li class="nav-item"><a href="/" class="nav-link">Cadastrar Marcas</a></li>
+        <li class="nav-item"><a href="/" class="nav-link">Cadastrar Modelos</a></li>
+      </ul>
+    </div>
+
+  </header>
+
+  <main>
+
+    <div class="nome-modelo">
+      <h1 id="title-modelo" class="title-modelo"> ----- Nome do Modelo ----- </h1>
+    </div>
+    <div class="form-modelos">
+      <form action="" id="form-modelo" class="form-modelo">
+        <label for="">Nome: </label>
+          <input type="text">
+          <label for="">Marca: </label>
+          <select id="select-modelos" class="select-modelos">
+          <!-- valores inseridos manualmente para demonstração -->
+          <option value="">Honda</option>
+            <option value="">Toyota</option>
+            <option value="">Chevrolet</option>
+          </select>
+      </form>
+      <div id="buttons" class="buttons">
+        <button class="button cancelar">Cancelar</button>
+        <button class="button salvar">Salvar</button>
+      </div>
+    </div>
+
+  </main>
+
+  <script src="./js/navbar.js"></script>
+</body>
+</html>

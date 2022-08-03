@@ -1,0 +1,162 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+
+body{
+  background-color: lightgray;
+}
+
+header{
+  background-color: #23232a;
+  box-shadow: 0px 3px 10px #464646;
+}
+
+.nav-bar{
+  display: flex;
+  justify-content: space-between;
+  padding: 1.5rem 6rem;
+}
+
+.nav-list{
+  display: flex;
+  align-items: center;
+}
+
+.nav-list ul{
+  display: flex;
+  justify-content: center;
+  list-style: none;
+}
+
+.nav-item{
+  margin: 0 15px;
+}
+
+.nav-link{
+  background: #fff;
+  border-radius: 20px;
+  padding: 5px;
+  text-decoration: none;
+  color: #23232a;
+  font-size: 20px;
+  font-weight: 400;
+  letter-spacing: 1px;
+  transition: box-shadow .6s ease;
+}
+
+.nav-link:hover{
+  color: #fff;
+  box-shadow: inset 200px 0 0 #23232a;
+}
+
+.logo{
+  display: flex;
+  align-items: center;
+}
+
+.logo a{
+  color: #fff;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 30px;
+  letter-spacing: 3px;
+}
+
+.mobile-menu-icon{
+  display: none;
+}
+
+.mobile-menu{
+  display: none;
+}
+
+@media screen and (max-width: 999px){
+  .nav-bar{
+    padding: 1.5rem 4rem;
+  }
+
+  .nav-item{
+    display: none;
+  }
+
+  .mobile-menu-icon{
+    display: block;
+  }
+
+  .mobile-menu-icon button{
+    cursor: pointer;
+  }
+
+  .mobile-menu ul{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding-bottom: 1rem;
+  }
+
+  .mobile-menu .nav-item{
+    display: block;
+    padding-top: 1.2rem;
+  }
+  .open{
+    display: block;
+  }
+}
+
+/* estilos main */
+.nome-modelo{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 20px;
+  margin-bottom: 15px;
+}
+
+.form-modelos{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-transform: uppercase;
+  font-size: 20px;
+}
+
+.form-modelo{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.form-modelo input, select, option{
+  border-radius: 10px;
+}
+
+.form-modelo select, option{
+  font-size: 1rem;
+}
+
+.button{
+  border-style: none;
+  border-radius: 10px;
+  height: 40px;
+  padding: 3px 6px;
+  background-color: black;
+  color: white;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: box-shadow .6s ease;
+}
+
+.salvar{
+  background: #155134;
+}
+
+.button:hover{
+  box-shadow: inset 200px 0 0 #fff;
+}
+
+.salvar:hover, .cancelar:hover{
+  color: #23232a;
+}
